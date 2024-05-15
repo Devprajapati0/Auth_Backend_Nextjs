@@ -19,7 +19,7 @@ function Dynamicpage({params}:any) {
 
     useEffect(()=>{
         try {
-               axios.post('http://localhost:3000/api/users/me').then((resp)=>{
+               axios.post('/api/users/me').then((resp)=>{
                 setUser({
                    
                     username:resp.data.data.username,

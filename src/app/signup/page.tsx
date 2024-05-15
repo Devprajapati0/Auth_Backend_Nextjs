@@ -31,7 +31,7 @@ function Signuppage() {
   const onSignup = async() => {
    try {
     setLoading(true) 
-     const response =  await axios.post('http://localhost:3000/api/users/signup',user)
+     const response =  await axios.post('/api/users/signup',user)
      console.log("Signup success",response.data.message);
      setError(response.data.message)
      navigate.push('/redirectpage')

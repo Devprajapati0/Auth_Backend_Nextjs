@@ -26,7 +26,7 @@ function Loginpage() {
   const onLogin = async() => {
    try {
     setLoading(true) 
-     const response =  await axios.post('http://localhost:3000/api/users/login',user)
+     const response =  await axios.post('/api/users/login',user)
      console.log("login success",response.data);
      navigate.push('/profile')
    } catch (error:any) {

@@ -27,7 +27,7 @@ function Page(){
   const onVerify = async() => {
       try {
           console.log("getToken",getToken.get('token'))
-        const response =  await axios.post('http://localhost:3000/api/users/verifyemail',{token :`${getToken.get('token')}`})
+        const response =  await axios.post('/api/users/verifyemail',{token :`${getToken.get('token')}`})
         console.log('response verigy',response)
         setVerified(true)
       } catch (error:any) {

@@ -33,7 +33,7 @@ function Profilepage() {
   const logout = async()=>{
     
       try {
-       await axios.get('http://localhost:3000/api/users/logout')
+       await axios.get('/api/users/logout')
       toast.success("sucessuflly logout")
       navigate.push('/login')
         } catch (error:any) {
