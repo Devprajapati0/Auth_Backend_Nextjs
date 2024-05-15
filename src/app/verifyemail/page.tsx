@@ -3,6 +3,7 @@ import axios from 'axios'
 import React,{useEffect, useState} from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
+import { Suspense } from 'react'
 
 function Verifypage() {
     const [verified, setVerified] = useState<boolean>(false)
@@ -42,7 +43,7 @@ function Verifypage() {
     //  const token query.token
     // })
   return (
-    <> <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <Suspense fallback={<div>Loading...</div>}> <div className="flex flex-col items-center justify-center min-h-screen py-2">
 
     <h1 className="text-4xl">Verify Email</h1>
     <br /> <br /> 
@@ -69,7 +70,7 @@ function Verifypage() {
         </div>
     )}
 </div>
-   </>
+   </Suspense>
   )
 }
 
