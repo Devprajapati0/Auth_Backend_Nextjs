@@ -1,1 +1,1 @@
-Authentication using neztjs : Made a simple email authentication system and used nodemialer as an email service provider
+Authentication using nextjs : Made a simple authentication system in which verification is done by email and used nodemialer as an email service provider
