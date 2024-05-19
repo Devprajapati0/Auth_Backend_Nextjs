@@ -20,7 +20,7 @@ function Profilepage() {
 
   const getUserDetails = async()=> {
  try {
-  const resp = await axios.post('http://localhost:3000/api/users/me')
+  const resp = await axios.post('/api/users/me')
   
   setUser({
    id:resp.data.data._id,
